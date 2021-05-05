@@ -1,5 +1,5 @@
 {
-  "name": "htmlgenerator",
+  "name": "gen-html",
   "version": "1.0.0",
   "description": "Convert JS objects to HTML",
   "main": "index.js",
@@ -15,10 +15,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adrian154/htmlgenerator.git"
+    "url": "git+https://github.com/adrian154/gen-html.git"
   },
   "bugs": {
-    "url": "https://github.com/adrian154/htmlgenerator/issues"
+    "url": "https://github.com/adrian154/gen-html/issues"
   },
-  "homepage": "https://github.com/adrian154/htmlgenerator#readme"
+  "homepage": "https://github.com/adrian154/gen-html#readme"
 }

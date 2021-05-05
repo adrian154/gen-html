@@ -1,4 +1,4 @@
-# html-generator
+# gen-html
 
 Convert JS objects to HTML
 
@@ -25,12 +25,12 @@ The `allowLiteralHTML` property on an object will override whatever was passed t
 **Parameters**:
 * `object`: The object to be converted.
 
-This method is identical to `.convert()`, except it appends `<!DOCTYPE html>` at the beginning of the result.
+This method is identical to `.convert()`, except it prepends `<!DOCTYPE html>` at the beginning of the result.
 
 # Examples
 
 ```
-htmlgen.convert({
+genhtml.convert({
     tag: "html",
     lang: "en",
     child: [
