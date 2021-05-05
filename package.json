@@ -1,5 +1,5 @@
 {
-  "name": "obj-to-html",
+  "name": "htmlgenerator",
   "version": "1.0.0",
   "description": "Convert JS objects to HTML",
   "main": "index.js",
@@ -8,8 +8,17 @@
   },
   "keywords": [
     "html",
-    "encode"
+    "generator",
+    "html generator"
   ],
   "author": "adrianz",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrian154/htmlgenerator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adrian154/htmlgenerator/issues"
+  },
+  "homepage": "https://github.com/adrian154/htmlgenerator#readme"
 }
