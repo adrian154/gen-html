@@ -21,7 +21,7 @@ const convertTag = (object, allowLiteralHTML) => {
     }
 
     if(typeof object !== "object" || object == null) {
-        throw new Error(`Can't convert a ${typeof object} to HTML`);
+        return "";
     }
 
     if(!object.tag) throw new Error("Object has no tag");
