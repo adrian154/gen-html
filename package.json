@@ -1,6 +1,6 @@
 {
   "name": "gen-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert JS objects to HTML",
   "main": "index.js",
   "scripts": {
