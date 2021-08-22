@@ -6,7 +6,7 @@ const voidElements = [
 ];
 
 const escapeHTML = text => text.replace(/>/g, "&gt;").replace(/</g, "&lt;");
-const escapeQuotes = text => text.replace(/"/g, "&quot;").replace(/\\/g, "&bsol;");
+const escapeAttribute = text => escapeHTML(text).replace(/"/g, "&quot;").replace(/\\/g, "&bsol;");
 const createDocument = document => "<!DOCTYPE html>" + convertTag(document);
 
 // Convert single element
@@ -25,7 +25,7 @@ const convertTag = (object, allowLiteralHTML) => {
     }
 
     if(!object.tag) throw new Error("Object has no tag");
-    const openTag = `<${[object.tag, ...Object.keys(object).filter(attr => !["tag", "child", "allowLiteralHTML"].includes(attr)).map(attr => object[attr] ? `${attr}="${escapeQuotes(String(object[attr]))}"` : attr)].join(" ")}>`;
+    const openTag = `<${[object.tag, ...Object.keys(object).filter(attr => !["tag", "child", "allowLiteralHTML"].includes(attr)).map(attr => object[attr] ? `${attr}="${escapeAttribute(String(object[attr]))}"` : attr)].join(" ")}>`;
 
     if(voidElements.includes(object.tag)) {
        return openTag; 
