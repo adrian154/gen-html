@@ -4,7 +4,7 @@ Convert JS objects to HTML
 
 # Usage
 
-# `htmlgen.convert(object, allowLiteralHTML)`
+# `htmlgen.convertTag(object, allowLiteralHTML)`
 
 **Parameters**:
 * `object`: The object to be converted. It may be an object, an array, or a string.
@@ -16,21 +16,21 @@ If `object` is a string, this method returns the string unchanged (except angled
 
 If `object` is an array, this method will convert each element of the array to HTML, returning the concatenated HTML.
 
-If `object` is an object, this method will generate an HTML element. `object.tag` will be the element's tag name. Any keys on the object not named `tag`, `child` or `allowLiteralHTML` will be encoded as an attribute under the object. The generated element's contents will be `object.child`, which will be recursively converted to HTML using `.convert()`.
+If `object` is an object, this method will generate an HTML element. `object.tag` will be the element's tag name. Any keys on the object not named `tag`, `child` or `allowLiteralHTML` will be encoded as an attribute under the object. The generated element's contents will be `object.child`, which will be recursively converted to HTML using `.convertTag()`.
 
-The `allowLiteralHTML` property on an object will override whatever was passed to `.convert()` if present.
+The `allowLiteralHTML` property on an object will override whatever was passed to `.convertTag()` if present.
 
 # `htmlgen.createDocument(object)`
 
 **Parameters**:
 * `object`: The object to be converted.
 
-This method is identical to `.convert()`, except it prepends `<!DOCTYPE html>` at the beginning of the result.
+This method is identical to `.convertTag()`, except it prepends `<!DOCTYPE html>` at the beginning of the result.
 
 # Examples
 
 ```
-genhtml.convert({
+genhtml.convertTag({
     tag: "html",
     lang: "en",
     child: [

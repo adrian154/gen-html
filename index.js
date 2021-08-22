@@ -35,7 +35,4 @@ const convertTag = (object, allowLiteralHTML) => {
 
 };
 
-module.exports = {
-    createDocument: createDocument,
-    convert: convertTag
-};
+module.exports = {escapeHTML, createDocument, convertTag};
