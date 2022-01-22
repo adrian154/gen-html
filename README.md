@@ -1,3 +1,7 @@
+# WAIT!
+
+This package is now obsolete, check out [html-generator](https://github.com/adrian154/html-generator).
+
 # gen-html
 
 Convert JS objects to HTML
